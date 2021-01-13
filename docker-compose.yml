@@ -9,7 +9,7 @@ services:
       - type: bind
         source: /root/jxser
         target: /root/jxser
-    stdin_open: true                # docker run -i
+    # stdin_open: true                # docker run -i
     tty: true                       # docker run -t
   
   mysql:
