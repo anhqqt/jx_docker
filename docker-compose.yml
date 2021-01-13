@@ -16,10 +16,10 @@ services:
     network_mode: "host"
     volumes:
       - type: volume
-        source: data_jx_mysql
+        source: data_mysql
         target: /var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=a130993@310594W
 
 volumes: 
-  data_jx_mysql:
+  data_mysql:
