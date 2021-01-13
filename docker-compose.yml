@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  centos:
+    build: ./jx_server/
+    container_name: "jx_server"
+    network_mode: "host"
+    volumes:
+      - type: bind
+        source: /root/jxser
+        target: /root/jxser
+  
+  mysql:
+    image: "mysql:5.6"
+    container_name: "jx_mysql"
+    network_mode: "host"
+    volumes:
+      - type: volume
+        source: data_jx_mysql
+        target: /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=a130993@310594W
+
+volumes: 
+  data_jx_mysql:
