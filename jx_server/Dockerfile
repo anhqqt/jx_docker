@@ -7,4 +7,9 @@ RUN yum update -y && \
     yum install net-tools yum-utils htop vim nano -y
 
 # Install library for JX
-RUN yum install -y libuuid.i686 libstdc++.so.6 libcrypto.so.6 libuuid.so.1
+RUN yum install -y && \
+    yum install -y libuuid.i686 && \
+    yum install -y libstdc++.so.6 && \
+    yum install -y libcrypto.so.6 && \
+    yum install -y libuuid.so.1 && \
+    pwd
