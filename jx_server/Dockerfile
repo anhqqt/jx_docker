@@ -8,7 +8,7 @@ RUN yum update -y && \
 
 # Install library for JX
 # Use exit 0 to make sure command will always success and wont interrupt the build process
-RUN yum install -y libuuid.i686; exit 0 && \
-    yum install -y libstdc++.so.6; exit 0 && \
-    yum install -y libcrypto.so.6; exit 0 && \
-    yum install -y libuuid.so.1; exit 0
+RUN yum install -y libuuid.i686; exit 0
+RUN yum install -y libstdc++.so.6; exit 0
+RUN yum install -y libcrypto.so.6; exit 0
+RUN yum install -y libuuid.so.1; exit 0
